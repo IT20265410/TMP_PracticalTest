@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Items Management</title>
+<title>User Management</title>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.4.0.min.js"></script>
 <script src="Components/users.js"></script>
@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-6">
-				<h1>User Management (ElectroGrid)</h1>
+				<h1>User Management (EG)</h1>
 				<form id="formUser" name="formUser">
 					First name: <input id="firstName" name="firstName" type="text"
 						class="form-control form-control-sm"> <br> 

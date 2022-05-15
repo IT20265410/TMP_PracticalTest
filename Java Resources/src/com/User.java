@@ -29,7 +29,7 @@ public class User {
 
 			// Prepare the html table to be displayed
 			output = "<table border='1'><tr><th>First Name</th> <th>Last Name</th><th>NIC</th>"
-					+ "<th>Address</th><th>Phone</th><th>Emai</th><th>Update</th><th>Remove</th></tr>";
+					+ "<th>Address</th><th>Phone</th><th>Email</th><th>Update</th><th>Remove</th></tr>";
 
 			String query = "select * from user";
 			Statement stmt = con.createStatement();
@@ -46,7 +46,7 @@ public class User {
 				String email = rs.getString("email");
 
 				// Add into the html table
-				output += "<tr><td><input id='hidItemIDUpdate' name='hidItemIDUpdate' type='hidden' value='" + userId
+				output += "<tr><td><input id='hidUserIDUpdate' name='hidUserIDUpdate' type='hidden' value='" + userId
 						+ "'>" + firstName + "</td>";
 				output += "<td>" + lastName + "</td>";
 				output += "<td>" + NIC + "</td>";
@@ -80,7 +80,7 @@ public class User {
 			}
 
 			// create a prepared statement
-			String query = " insert into user (`userId`,`firstName`,`lastName`,`NIC`,`address`, `phone`, `email`)"
+			String query = "insert into user (`userId`,`firstName`,`lastName`,`NIC`,`address`, `phone`, `email`)"
 					+ " values (?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement preparedStmt = con.prepareStatement(query);
 

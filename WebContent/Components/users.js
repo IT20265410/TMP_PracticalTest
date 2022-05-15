@@ -105,19 +105,21 @@ function validateUserForm() {
 	if ($("#lastName").val().trim() == "") {
 		return "Insert your last name";
 	}
-	
-	if ($("#NIC").val().trim() == "") {
+
+	if ($("#NIC").val().length === 11) {
 		return "Insert NIC.";
 	}
 
 	if ($("#address").val().trim() == "") {
 		return "Insert address.";
 	}
-	
-	if ($("#phone").val().trim() == "") {
-		return "Insert phone number.";
+
+	// is numerical value
+	var phoneno = $("#phone").val().trim();
+	if (!$.isNumeric(phoneno)) {
+		return "Insert a numerical value for phone.";
 	}
-	
+
 	if ($("#email").val().trim() == "") {
 		return "Insert your email address.";
 	}
